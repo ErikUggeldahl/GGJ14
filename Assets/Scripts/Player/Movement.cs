@@ -40,9 +40,7 @@ public class Movement : MonoBehaviour {
 		movType = movementType.idle;
 
 		if (movDirection == movementDirection.left) 
-		{
 			rotateSpeed *= -1;
-		}
 	}
 	
 	// Update is called once per frame
