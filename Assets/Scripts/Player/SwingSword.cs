@@ -6,11 +6,12 @@ public class SwingSword : MonoBehaviour {
 	bool isSwinging = false;
 	public float delayTimer;
 	public float swingTime;
+	public Collider killBox;
 	float timer;
 
 	void Start()
 	{
-		collider.enabled = false;
+		killBox.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -38,17 +39,8 @@ public class SwingSword : MonoBehaviour {
 
 	IEnumerator activateSword(float time)
 	{
-		collider.enabled = true;
+		killBox.enabled = true;
 		yield return new WaitForSeconds (time);
-		collider.enabled = false;
-	}
-
-	void OnTriggerEnter(Collider other)
-	{
-		if (isSwinging && other.tag == "Enemy") 
-		{
-			// Kill
-			Destroy(other.gameObject);
-		}
+		killBox.enabled = false;
 	}
 }
