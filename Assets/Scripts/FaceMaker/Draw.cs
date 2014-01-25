@@ -10,6 +10,10 @@ public class Draw : MonoBehaviour
 	int lastY = -1;
 
 	Texture2D tex;
+	public Texture Tex
+	{
+		get { return tex; }
+	}
 
 	void Start()
 	{
