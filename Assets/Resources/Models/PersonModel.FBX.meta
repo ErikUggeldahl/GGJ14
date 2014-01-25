@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 0f89f3d9d8d77ec41aa126f6b276847d
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: BBase
+    100002: BHead
+    100004: BLArm1
+    100006: BLArm2
+    100008: BLLeg1
+    100010: BLLeg2
+    100012: BRArm1
+    100014: BRArm2
+    100016: BRLeg1
+    100018: BRLeg2
+    100020: BSpine1
+    100022: BSpine2
+    100024: FacePlate
+    100026: //RootNode
+    100028: Person
+    400000: BBase
+    400002: BHead
+    400004: BLArm1
+    400006: BLArm2
+    400008: BLLeg1
+    400010: BLLeg2
+    400012: BRArm1
+    400014: BRArm2
+    400016: BRLeg1
+    400018: BRLeg2
+    400020: BSpine1
+    400022: BSpine2
+    400024: FacePlate
+    400026: //RootNode
+    400028: Person
+    2300000: FacePlate
+    3300000: FacePlate
+    4300000: Person
+    4300002: FacePlate
+    7400000: BindPose
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Person
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BindPose
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BBase
+        weight: 1
+      - path: BBase/BLLeg1
+        weight: 1
+      - path: BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BBase/BRLeg1
+        weight: 1
+      - path: BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BBase/BSpine1
+        weight: 1
+      - path: BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  userData: 
