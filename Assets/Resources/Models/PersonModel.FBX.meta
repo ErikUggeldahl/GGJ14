@@ -1,43 +1,51 @@
 fileFormatVersion: 2
-guid: 0f89f3d9d8d77ec41aa126f6b276847d
+guid: 17959c6d60257824f974f3117c5f4a80
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: BBase
-    100002: BHead
-    100004: BLArm1
-    100006: BLArm2
-    100008: BLLeg1
-    100010: BLLeg2
-    100012: BRArm1
-    100014: BRArm2
-    100016: BRLeg1
-    100018: BRLeg2
-    100020: BSpine1
-    100022: BSpine2
-    100024: FacePlate
-    100026: //RootNode
+    100000: BaseHandle
+    100002: BBase
+    100004: BHead
+    100006: BLArm1
+    100008: BLArm2
+    100010: BLLeg1
+    100012: BLLeg2
+    100014: BRArm1
+    100016: BRArm2
+    100018: BRLeg1
+    100020: BRLeg2
+    100022: BSpine1
+    100024: BSpine2
+    100026: FacePlate
     100028: Person
-    400000: BBase
-    400002: BHead
-    400004: BLArm1
-    400006: BLArm2
-    400008: BLLeg1
-    400010: BLLeg2
-    400012: BRArm1
-    400014: BRArm2
-    400016: BRLeg1
-    400018: BRLeg2
-    400020: BSpine1
-    400022: BSpine2
-    400024: FacePlate
-    400026: //RootNode
+    100030: //RootNode
+    400000: BaseHandle
+    400002: BBase
+    400004: BHead
+    400006: BLArm1
+    400008: BLArm2
+    400010: BLLeg1
+    400012: BLLeg2
+    400014: BRArm1
+    400016: BRArm2
+    400018: BRLeg1
+    400020: BRLeg2
+    400022: BSpine1
+    400024: BSpine2
+    400026: FacePlate
     400028: Person
+    400030: //RootNode
     2300000: FacePlate
     3300000: FacePlate
     4300000: Person
     4300002: FacePlate
-    7400000: BindPose
+    7400000: Bind
+    7400002: Idle
+    7400004: Walk1
+    7400006: Walk2
+    7400008: Walk
+    7400010: Crouch
+    7400012: Jump
     9500000: //RootNode
     11100000: //RootNode
     13700000: Person
@@ -49,7 +57,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -57,10 +65,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: BindPose
+      name: Bind
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: .100000001
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -82,29 +90,321 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: BBase
+      - path: BaseHandle
         weight: 1
-      - path: BBase/BLLeg1
+      - path: BaseHandle/BBase
         weight: 1
-      - path: BBase/BLLeg1/BLLeg2
+      - path: BaseHandle/BBase/BLLeg1
         weight: 1
-      - path: BBase/BRLeg1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
         weight: 1
-      - path: BBase/BRLeg1/BRLeg2
+      - path: BaseHandle/BBase/BRLeg1
         weight: 1
-      - path: BBase/BSpine1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
         weight: 1
-      - path: BBase/BSpine1/BSpine2
+      - path: BaseHandle/BBase/BSpine1
         weight: 1
-      - path: BBase/BSpine1/BSpine2/BHead
+      - path: BaseHandle/BBase/BSpine1/BSpine2
         weight: 1
-      - path: BBase/BSpine1/BSpine2/BLArm1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
         weight: 1
-      - path: BBase/BSpine1/BSpine2/BLArm1/BLArm2
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
         weight: 1
-      - path: BBase/BSpine1/BSpine2/BRArm1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
         weight: 1
-      - path: BBase/BSpine1/BSpine2/BRArm1/BRArm2
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 16
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle
+        weight: 1
+      - path: BaseHandle/BBase
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk1
+      takeName: Take 001
+      firstFrame: 17
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle
+        weight: 1
+      - path: BaseHandle/BBase
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk2
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle
+        weight: 1
+      - path: BaseHandle/BBase
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Crouch
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 28
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle
+        weight: 1
+      - path: BaseHandle/BBase
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
+        weight: 1
+      - path: FacePlate
+        weight: 1
+      - path: Person
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 29
+      lastFrame: 32
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle
+        weight: 1
+      - path: BaseHandle/BBase
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BLLeg1/BLLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1
+        weight: 1
+      - path: BaseHandle/BBase/BRLeg1/BRLeg2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BHead
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BLArm1/BLArm2
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1
+        weight: 1
+      - path: BaseHandle/BBase/BSpine1/BSpine2/BRArm1/BRArm2
         weight: 1
       - path: FacePlate
         weight: 1
