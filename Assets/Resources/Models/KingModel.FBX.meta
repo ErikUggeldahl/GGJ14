@@ -37,6 +37,7 @@ ModelImporter:
     7400000: Bind
     7400002: Idle
     7400004: Attack
+    7400006: Duck
     9500000: //RootNode
     11100000: //RootNode
     13700000: King
@@ -172,6 +173,62 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 17
       lastFrame: 24
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle001
+        weight: 1
+      - path: BaseHandle001/BBase001
+        weight: 1
+      - path: BaseHandle001/BBase001/BLLeg003
+        weight: 1
+      - path: BaseHandle001/BBase001/BLLeg003/BLLeg004
+        weight: 1
+      - path: BaseHandle001/BBase001/BRLeg003
+        weight: 1
+      - path: BaseHandle001/BBase001/BRLeg003/BRLeg004
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BHead001
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003/BLArm004
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003
+        weight: 1
+      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003/BRArm004
+        weight: 1
+      - path: King
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Duck
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 28
       wrapMode: 1
       orientationOffsetY: 0
       level: 0
