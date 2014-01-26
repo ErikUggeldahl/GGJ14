@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: 05bf671ec4560da49a40b202e1bfc767
+guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: BBase001
-    100002: BHead001
-    100004: BLArm003
-    100006: BLArm004
-    100008: BLLeg003
-    100010: BLLeg004
-    100012: BRArm003
-    100014: BRArm004
-    100016: BRLeg003
-    100018: BRLeg004
-    100020: BSpine003
-    100022: BSpine004
-    100024: //RootNode
-    100026: BaseHandle001
-    100028: King
-    400000: BBase001
-    400002: BHead001
-    400004: BLArm003
-    400006: BLArm004
-    400008: BLLeg003
-    400010: BLLeg004
-    400012: BRArm003
-    400014: BRArm004
-    400016: BRLeg003
-    400018: BRLeg004
-    400020: BSpine003
-    400022: BSpine004
-    400024: //RootNode
-    400026: BaseHandle001
-    400028: King
-    4300000: King
+    100000: BaseHandle002
+    100002: BBase002
+    100004: BHead002
+    100006: BLArm005
+    100008: BLArm006
+    100010: BLLeg005
+    100012: BLLeg006
+    100014: BRArm005
+    100016: BRArm006
+    100018: BRLeg005
+    100020: BRLeg006
+    100022: BSpine005
+    100024: BSpine006
+    100026: Enemy
+    100028: //RootNode
+    400000: BaseHandle002
+    400002: BBase002
+    400004: BHead002
+    400006: BLArm005
+    400008: BLArm006
+    400010: BLLeg005
+    400012: BLLeg006
+    400014: BRArm005
+    400016: BRArm006
+    400018: BRLeg005
+    400020: BRLeg006
+    400022: BSpine005
+    400024: BSpine006
+    400026: Enemy
+    400028: //RootNode
+    4300000: Enemy
     7400000: Bind
-    7400002: Idle
-    7400004: Attack
-    7400006: Duck
+    7400002: Walk
+    7400004: Splay
+    7400006: Charge
     9500000: //RootNode
     11100000: //RootNode
-    13700000: King
+    13700000: Enemy
   materials:
     importMaterials: 0
     materialName: 0
@@ -49,7 +49,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 0
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -61,7 +61,7 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 0
       lastFrame: .100000001
-      wrapMode: 1
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -82,38 +82,38 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: BaseHandle001
+      - path: BaseHandle002
         weight: 1
-      - path: BaseHandle001/BBase001
+      - path: BaseHandle002/BBase002
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003
+      - path: BaseHandle002/BBase002/BLLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003/BLLeg004
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003
+      - path: BaseHandle002/BBase002/BRLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003/BRLeg004
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003
+      - path: BaseHandle002/BBase002/BSpine005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BHead001
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003/BLArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003/BRArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
         weight: 1
-      - path: King
+      - path: Enemy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle
+      name: Walk
       takeName: Take 001
       firstFrame: 1
       lastFrame: 16
@@ -138,42 +138,42 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: BaseHandle001
+      - path: BaseHandle002
         weight: 1
-      - path: BaseHandle001/BBase001
+      - path: BaseHandle002/BBase002
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003
+      - path: BaseHandle002/BBase002/BLLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003/BLLeg004
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003
+      - path: BaseHandle002/BBase002/BRLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003/BRLeg004
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003
+      - path: BaseHandle002/BBase002/BSpine005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BHead001
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003/BLArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003/BRArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
         weight: 1
-      - path: King
+      - path: Enemy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack
+      name: Splay
       takeName: Take 001
       firstFrame: 17
-      lastFrame: 24
-      wrapMode: 1
+      lastFrame: 20
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -194,42 +194,42 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: BaseHandle001
+      - path: BaseHandle002
         weight: 1
-      - path: BaseHandle001/BBase001
+      - path: BaseHandle002/BBase002
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003
+      - path: BaseHandle002/BBase002/BLLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003/BLLeg004
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003
+      - path: BaseHandle002/BBase002/BRLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003/BRLeg004
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003
+      - path: BaseHandle002/BBase002/BSpine005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BHead001
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003/BLArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003/BRArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
         weight: 1
-      - path: King
+      - path: Enemy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Duck
+      name: Charge
       takeName: Take 001
-      firstFrame: 25
+      firstFrame: 21
       lastFrame: 28
-      wrapMode: 1
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -250,33 +250,33 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: BaseHandle001
+      - path: BaseHandle002
         weight: 1
-      - path: BaseHandle001/BBase001
+      - path: BaseHandle002/BBase002
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003
+      - path: BaseHandle002/BBase002/BLLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BLLeg003/BLLeg004
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003
+      - path: BaseHandle002/BBase002/BRLeg006
         weight: 1
-      - path: BaseHandle001/BBase001/BRLeg003/BRLeg004
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003
+      - path: BaseHandle002/BBase002/BSpine005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BHead001
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BLArm003/BLArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
         weight: 1
-      - path: BaseHandle001/BBase001/BSpine003/BSpine004/BRArm003/BRArm004
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
         weight: 1
-      - path: King
+      - path: Enemy
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
