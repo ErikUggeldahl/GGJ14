@@ -7,7 +7,7 @@ public class T : MonoBehaviour
 	{
 	}
 	
-	void Update () 
+	void Update() 
 	{
 	}
 }
