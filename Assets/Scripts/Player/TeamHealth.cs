@@ -11,6 +11,8 @@ public class TeamHealth : MonoBehaviour {
 
 	public HUD3D hud;
 
+	public AudioSource impactSource;
+	public AudioClip impactSound;
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,11 +23,15 @@ public class TeamHealth : MonoBehaviour {
 	{
 		if (!isInvicible) 
 		{
+			impactSource.clip = impactSound;
+			impactSource.Play();
 			currentHP -= damage;
 			Debug.Log(currentHP);
 			isInvicible = true;
 			hud.MoveHPHudItem(startingHP - currentHP);
 			StartCoroutine(invicibilityCooldown(invicibilityTimer));
+			if (currentHP <= 0)
+				Application.LoadLevel("EndMenu");
 		}
 	}
 

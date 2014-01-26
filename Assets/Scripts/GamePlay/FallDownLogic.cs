@@ -14,5 +14,9 @@ public class FallDownLogic : MonoBehaviour {
 
 			other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 		}
+		else if(other.tag == "Player")
+		{
+			Application.LoadLevel("EndMenu");
+		}
 	}
 }

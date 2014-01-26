@@ -4,6 +4,11 @@ using System.Collections;
 public class SwarmEnemyMovement : MonoBehaviour {
 
 
+	public float swarmSoundRandomValMin;
+	public float swarmSoundRandomValMax;
+	public AudioClip[] swarmClips;
+	public AudioSource swarmSource;
+
 	bool isActive = true;
 	public bool IsActive
 	{
@@ -45,6 +50,7 @@ public class SwarmEnemyMovement : MonoBehaviour {
 	public IEnumerator Seek() 
 	{
 		swarmAnim.PlayQueued("Walk");
+		StartCoroutine (RandomDelaySoundLoop(swarmSoundRandomValMin, swarmSoundRandomValMax));
 		while (isActive) 
 		{
 			Move(swarmSpeed);
@@ -59,6 +65,20 @@ public class SwarmEnemyMovement : MonoBehaviour {
 		yield return new WaitForSeconds (timeBeforeRespawn);
 		GameObject temp = gameObject;
 		swarmSpawner.SetPosition (ref temp, true);
+	}
+
+	IEnumerator RandomDelaySoundLoop(float min, float max)
+	{
+		while (isActive) 
+		{
+			yield return new WaitForSeconds(Random.Range(min,max));
+			if (Random.value > 0.90f)
+			{
+				swarmSource.clip = swarmClips[0];
+				swarmSource.Play();
+			}
+		}
+
 	}
 
 	void Attack(int damage)

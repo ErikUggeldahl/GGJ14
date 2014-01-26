@@ -60,7 +60,7 @@ public class SpawmEnemy : MonoBehaviour {
 	void Update()
 	{
 		// Track player
-		transform.position = new Vector3(target.position.x - distanceBehindPlayer, transform.position.y, target.position.z);
+		transform.position = new Vector3(target.position.x, transform.position.y, target.position.z - distanceBehindPlayer);
 	}
 
 	Vector3 RandomSpawnLocation(Bounds limit)

@@ -17,6 +17,8 @@ public class SwingSword : MonoBehaviour {
 	float timer;
 	public Animation liegeAnim;
 	public CapsuleCollider capCollider;
+	public AudioClip[] liegeSounds;
+	public AudioSource liegeSoundSource;
 
 
 	void Start()
@@ -58,7 +60,8 @@ public class SwingSword : MonoBehaviour {
 	{
 		liegeAnim.Stop();
 		liegeAnim.PlayQueued("Duck");
-
+		liegeSoundSource.clip = liegeSounds[1];
+		liegeSoundSource.Play();
 		while(Input.GetMouseButton(1))
 		{
 			capCollider.center = new Vector3(capCollider.center.x, 2.0f, capCollider.center.z);
@@ -72,6 +75,8 @@ public class SwingSword : MonoBehaviour {
 	IEnumerator activateSword(float time)
 	{
 		killBox.enabled = true;
+		liegeSoundSource.clip = liegeSounds[0];
+		liegeSoundSource.Play();
 		yield return new WaitForSeconds (time);
 		liegeAnim.PlayQueued("Idle");
 		killBox.enabled = false;

@@ -9,6 +9,14 @@ public class JumpListener : MonoBehaviour {
 	private float timer;
 	private int jumperCount = 0;
 
+	AudioSource jumpSource;
+	public AudioClip jumpSound;
+
+	void Start()
+	{
+		jumpSource = GetComponent<AudioSource>();
+	}
+
 	public IEnumerator checkJumpState(float jumpPower)
 	{
 		jumperCount++;
@@ -16,6 +24,8 @@ public class JumpListener : MonoBehaviour {
 		{
 			if (jumperCount >= movers.Length)
 			{
+				jumpSource.clip = jumpSound;
+				jumpSource.Play();
 				Jump(jumpPower);
 				break;
 			}
