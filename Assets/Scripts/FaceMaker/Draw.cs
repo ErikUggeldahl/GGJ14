@@ -10,7 +10,7 @@ public class Draw : MonoBehaviour
     int lastY = -1;
 
     Texture2D tex;
-    const int DIM = 128;
+    const int DIM = 64;
     const int BRUSH_SIZE = 2;
 
     bool drawing = false;
@@ -20,6 +20,7 @@ public class Draw : MonoBehaviour
         tex = new Texture2D(DIM, DIM);
         tex.filterMode = FilterMode.Point;
         tex.alphaIsTransparency = true;
+        tex.mipMapBias = -3f;
 
         Color clear = new Color(1f, 1f, 1f, 0f);
         Color[] clearArray = new Color[DIM * DIM];

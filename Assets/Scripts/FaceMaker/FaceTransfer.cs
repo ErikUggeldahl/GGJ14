@@ -11,14 +11,21 @@ public class FaceTransfer : MonoBehaviour
     public TextMesh blueVassalLabel;
     public TextMesh redVassalLabel;
 
+    FaceTextureStore store;
+
     void Start()
     {
-        FaceTextureStore store = GameObject.FindGameObjectWithTag("FaceStore").GetComponent<FaceTextureStore>();
+        store = GameObject.FindGameObjectWithTag("FaceStore").GetComponent<FaceTextureStore>();
 
+        Transfer();
+    }
+
+    public void Transfer()
+    {
         liegeFace.material.mainTexture = store.LiegeFace;
         blueVassalFace.material.mainTexture = store.BlueVassalFace;
         redVassalFace.material.mainTexture = store.RedVassalFace;
-
+        
         liegeLabel.text = store.LiegeName;
         blueVassalLabel.text = store.BlueVassalName;
         redVassalLabel.text = store.RedVassalName;
