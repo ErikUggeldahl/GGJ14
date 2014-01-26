@@ -41,8 +41,8 @@ public class Movement : MonoBehaviour {
 	void Start () 
 	{
 		movType = movementType.idle;
-		if (movDirection == movementDirection.left) 
-			rotateSpeed *= -1;
+		if (movDirection == movementDirection.left)
+            rotateSpeed *= -1;
 	}
 	
 	// Update is called once per frame
@@ -73,8 +73,8 @@ public class Movement : MonoBehaviour {
 	{
 		if (forcedAppliedTo.velocity.magnitude <= MAX_MOVE_SPEED) 
 		{
-			forcedAppliedTo.AddForce (transform.forward * speed, ForceMode.VelocityChange);
-			forcedAppliedTo.AddTorque(new Vector3(0, rotateSpeed * forcedAppliedTo.velocity.magnitude, 0), ForceMode.VelocityChange);
+            forcedAppliedTo.AddForce(transform.forward * speed + Vector3.up, ForceMode.VelocityChange);
+            forcedAppliedTo.AddTorque(new Vector3(0f, rotateSpeed * 4f, 0f), ForceMode.VelocityChange);
 		}
 		yield return new WaitForFixedUpdate();
 	}
