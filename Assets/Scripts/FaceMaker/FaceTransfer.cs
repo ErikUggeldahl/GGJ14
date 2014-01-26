@@ -15,8 +15,11 @@ public class FaceTransfer : MonoBehaviour
 
     void Start()
     {
-        store = GameObject.FindGameObjectWithTag("FaceStore").GetComponent<FaceTextureStore>();
+        GameObject storeObj = GameObject.FindGameObjectWithTag("FaceStore");
+        if (storeObj == null)
+            return;
 
+        store = storeObj.GetComponent<FaceTextureStore>();
         Transfer();
     }
 
