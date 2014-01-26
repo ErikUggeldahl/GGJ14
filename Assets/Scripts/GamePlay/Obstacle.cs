@@ -4,6 +4,7 @@ using System.Collections;
 public class Obstacle : MonoBehaviour {
 
 	public int damage = 1;
+	AudioSource impactSource;
 
 	void OnCollisionEnter(Collision other)
 	{

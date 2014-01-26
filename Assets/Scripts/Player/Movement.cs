@@ -34,6 +34,8 @@ public class Movement : MonoBehaviour {
 	public KeyCode jump;
 	public Rigidbody forcedAppliedTo;
 	public JumpListener jumplistener;
+	public AudioClip[] Sounds;
+	public AudioSource VassalSound;
 
 	public Animation VassalAnim;
 
@@ -52,11 +54,16 @@ public class Movement : MonoBehaviour {
 		{
 			movType = movementType.leftFoot;
 			VassalAnim.PlayQueued("Walk1");
+			VassalSound.clip = Sounds[0];
+			Debug.Log("Play");
+			VassalSound.Play();
 			StartCoroutine(Move(moveSpeed));
 		}
 		else if (Input.GetKeyDown(rightFoot) && movType != movementType.rightFoot)
 		{
 			movType = movementType.rightFoot;
+			VassalSound.clip = Sounds[0];
+			VassalSound.Play();
 			VassalAnim.PlayQueued("Walk2");
 			StartCoroutine(Move(moveSpeed));
 		}

@@ -20,11 +20,16 @@ public class ChargingEnemy : MonoBehaviour {
 	
 
 	public float chargingSpeed;
+	public float delayBetweenSound;
 	float ATTACKDISTANCE = 2;
 	public SpawmEnemy spawning;
 
+	public AudioClip[] chargerSounds;
+	AudioSource chargerSource;
+
 	void Start () 
 	{
+		chargerSource = GetComponent<AudioSource>();
 		StartCoroutine (ChangeState (chargingState.charging));
 	}
 	
@@ -60,12 +65,24 @@ public class ChargingEnemy : MonoBehaviour {
 
 	IEnumerator Charging()
 	{
+		StartCoroutine("DelayRepeatSound", delayBetweenSound); 
 		while (Vector3.Distance(transform.position, target.position) > ATTACKDISTANCE) 
 		{
 			Move(chargingSpeed);
 			yield return new WaitForFixedUpdate();
 		}
+		StopCoroutine("DelayRepeatSound");
 		StartCoroutine(ChangeState (chargingState.attacking));
+	}
+
+	IEnumerator DelayRepeatSound(float delay)
+	{
+		while (Vector3.Distance(transform.position, target.position) > ATTACKDISTANCE)
+		{
+			chargerSource.clip = chargerSounds[0];
+			chargerSource.Play();
+			yield return new WaitForSeconds(delay);
+		}
 	}
 
 	IEnumerator Attack()
