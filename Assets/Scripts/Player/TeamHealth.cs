@@ -30,6 +30,8 @@ public class TeamHealth : MonoBehaviour {
 			isInvicible = true;
 			hud.MoveHPHudItem(startingHP - currentHP);
 			StartCoroutine(invicibilityCooldown(invicibilityTimer));
+			if (currentHP <= 0)
+				Application.LoadLevel("EndMenu");
 		}
 	}
 

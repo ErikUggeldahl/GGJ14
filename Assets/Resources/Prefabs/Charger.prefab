@@ -432,7 +432,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.6543579, y: -.0120372772, z: -6.16220093}
+  m_LocalPosition: {x: 93.1663971, y: 129.005676, z: 1.41841483}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 400000}
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chargingSpeed: 8
+  chargingSpeed: 9
   delayBetweenSound: 2
   spawning: {fileID: 0}
   chargerSounds:

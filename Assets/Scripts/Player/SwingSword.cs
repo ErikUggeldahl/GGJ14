@@ -60,7 +60,7 @@ public class SwingSword : MonoBehaviour {
 	{
 		liegeAnim.Stop();
 		liegeAnim.PlayQueued("Duck");
-		liegeSoundSource.clip = liegeSounds[2];
+		liegeSoundSource.clip = liegeSounds[1];
 		liegeSoundSource.Play();
 		while(Input.GetMouseButton(1))
 		{
