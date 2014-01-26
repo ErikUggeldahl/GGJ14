@@ -18,6 +18,7 @@ public class TeamHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+        score = 0;
 		currentHP = startingHP;
         StartCoroutine(ScoreTicker());
 	}
