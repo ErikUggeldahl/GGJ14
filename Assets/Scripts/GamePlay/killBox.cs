@@ -9,11 +9,14 @@ public class killBox : MonoBehaviour {
 	{
 		if (other.tag == targetTag) 
 		{
+			GameObject temp = other.gameObject;
 			// Kill object
 			if (other.GetComponent<ChargingEnemy>() != null)
 				StartCoroutine(other.GetComponent<ChargingEnemy>().ChangeState(chargingState.dead));
-			else
-				Destroy(other.gameObject);
+			else if (other.GetComponent<SwarmEnemyMovement>() != null)
+				other.GetComponent<SwarmEnemyMovement>().SwarmSpawner.SetPosition(ref temp);
+				else
+					Destroy(other.gameObject);
 		}
 	}
 }
