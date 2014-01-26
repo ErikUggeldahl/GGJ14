@@ -13,7 +13,10 @@ public class EndMenu : MonoBehaviour
     {
         GameObject storeObj = GameObject.FindGameObjectWithTag("FaceStore");
         if (storeObj != null)
+        {
             store = storeObj.GetComponent<FaceTextureStore>();
+            store.FinalScore = TeamHealth.score;
+        }
     }
 
     void Update()

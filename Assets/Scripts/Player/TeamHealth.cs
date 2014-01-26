@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TeamHealth : MonoBehaviour {
 
+    public static long score;
+
 	public int startingHP;
 	int currentHP;
 
@@ -17,7 +19,17 @@ public class TeamHealth : MonoBehaviour {
 	void Start () 
 	{
 		currentHP = startingHP;
+        StartCoroutine(ScoreTicker());
 	}
+
+    IEnumerator ScoreTicker()
+    {
+        while (currentHP > 0)
+        {
+            score ++;
+            yield return null;
+        }
+    }
 
 	public void TakeDamage(int damage)
 	{
