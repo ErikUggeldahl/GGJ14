@@ -13,8 +13,22 @@ public class FaceTextureStore : MonoBehaviour
 
     public int FinalScore;
 
+    public bool Old = false;
+
+    void Awake()
+    {
+        if (Old)
+            return;
+
+        GameObject other = GameObject.FindGameObjectWithTag("FaceStore");
+        if (other != null && other != gameObject)
+            Destroy(other);
+
+    }
+
     void Start()
     {
         DontDestroyOnLoad(this);
+        Old = true;
     }
 }

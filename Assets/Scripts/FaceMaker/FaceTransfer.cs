@@ -11,6 +11,8 @@ public class FaceTransfer : MonoBehaviour
     public TextMesh blueVassalLabel;
     public TextMesh redVassalLabel;
 
+    public bool NameLabels = true;
+
     FaceTextureStore store;
 
     void Start()
@@ -28,7 +30,10 @@ public class FaceTransfer : MonoBehaviour
         liegeFace.material.mainTexture = store.LiegeFace;
         blueVassalFace.material.mainTexture = store.BlueVassalFace;
         redVassalFace.material.mainTexture = store.RedVassalFace;
-        
+
+        if (!NameLabels)
+            return;
+
         liegeLabel.text = store.LiegeName;
         blueVassalLabel.text = store.BlueVassalName;
         redVassalLabel.text = store.RedVassalName;
