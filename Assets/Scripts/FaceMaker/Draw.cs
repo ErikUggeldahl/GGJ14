@@ -19,7 +19,7 @@ public class Draw : MonoBehaviour
     {
         tex = new Texture2D(DIM, DIM);
         tex.filterMode = FilterMode.Point;
-        tex.alphaIsTransparency = true;
+        //tex.alphaIsTransparency = true;
         tex.mipMapBias = -3f;
 
         Color clear = new Color(1f, 1f, 1f, 0f);

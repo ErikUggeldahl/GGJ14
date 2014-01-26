@@ -38,7 +38,7 @@ public class EndMenu : MonoBehaviour
             GUILayout.Label("Final Score: " + store.FinalScore);
 
         if (GUILayout.Button("Replay?", GUILayout.Width(100f), GUILayout.Height(50f)))
-                return;
+            Application.LoadLevel("SetupMenu");
         
         GUILayout.EndVertical();
         GUILayout.EndArea();
