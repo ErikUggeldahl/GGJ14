@@ -55,7 +55,6 @@ public class Movement : MonoBehaviour {
 			movType = movementType.leftFoot;
 			VassalAnim.PlayQueued("Walk1");
 			VassalSound.clip = Sounds[0];
-			Debug.Log("Play");
 			VassalSound.Play();
 			StartCoroutine(Move(moveSpeed));
 		}
