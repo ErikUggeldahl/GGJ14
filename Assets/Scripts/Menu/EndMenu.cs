@@ -16,6 +16,12 @@ public class EndMenu : MonoBehaviour
             store = storeObj.GetComponent<FaceTextureStore>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            System.Diagnostics.Process.Start(Application.persistentDataPath);
+    }
+
     void OnGUI()
     {
         GUI.skin = skin;
@@ -36,7 +42,7 @@ public class EndMenu : MonoBehaviour
 
         if (pictureTaken)
             return;
-        string fileName = store != null ? store.LiegeName + store.BlueVassalName + store.RedVassalName + ".png" : "Default.png";
+        string fileName = store != null ? "/" + store.LiegeName + store.BlueVassalName + store.RedVassalName + ".png" : "/Default.png";
         Application.CaptureScreenshot(Application.persistentDataPath + fileName);
         pictureTaken = true;
     }
