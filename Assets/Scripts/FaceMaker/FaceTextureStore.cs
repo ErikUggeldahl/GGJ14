@@ -11,10 +11,24 @@ public class FaceTextureStore : MonoBehaviour
     public Texture2D BlueVassalFace;
     public Texture2D RedVassalFace;
 
-    public int FinalScore;
+    public long FinalScore;
+
+    public bool Old = false;
+
+    void Awake()
+    {
+        if (Old)
+            return;
+
+        GameObject other = GameObject.FindGameObjectWithTag("FaceStore");
+        if (other != null && other != gameObject)
+            Destroy(other);
+
+    }
 
     void Start()
     {
         DontDestroyOnLoad(this);
+        Old = true;
     }
 }

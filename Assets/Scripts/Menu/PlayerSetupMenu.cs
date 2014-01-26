@@ -6,7 +6,7 @@ public class PlayerSetupMenu : MonoBehaviour
     public GUISkin skin;
     public GameObject canvasObj;
 
-    public FaceTextureStore faceStore;
+    FaceTextureStore faceStore;
     public Camera rayCam;
     public GUIText countDownText;
     public FaceTransfer transfer;
@@ -32,10 +32,15 @@ public class PlayerSetupMenu : MonoBehaviour
     {
         playerCamOPos = playerCam.position;
         playerCamORot = playerCam.rotation;
+
+        faceStore = GameObject.FindGameObjectWithTag("FaceStore").GetComponent<FaceTextureStore>();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Y))
+            Application.LoadLevel("SetupMenu");
+
         if (!activeUpdate)
             return;
 
@@ -190,5 +195,6 @@ public class PlayerSetupMenu : MonoBehaviour
         playerCam.position = liegeFaceLock.position;
         playerCam.rotation = liegeFaceLock.rotation;
         yield return new WaitForSeconds(1f);
+        Application.LoadLevel("Gameplay");
     }
 }
