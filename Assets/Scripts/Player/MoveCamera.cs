@@ -32,6 +32,6 @@ public class MoveCamera : MonoBehaviour {
 		float deltaMouseX = mouseX - oldmouseX;
 		float deltaMouseY = mouseY - oldmouseY;
 
-		camera.transform.RotateAround(target.position, transform.up , deltaMouseX * rotateSpeed);
+		transform.RotateAround(target.position, transform.up , deltaMouseX * rotateSpeed);
 	}
 }

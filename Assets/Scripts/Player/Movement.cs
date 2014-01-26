@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -10,6 +10,13 @@ enum movementType
 	jump,
 	idle,
 	cantMove
+}
+
+enum JumpState
+{
+	none = 0,
+	prepared,
+	jumping
 }
 
 public enum movementDirection
@@ -26,6 +33,7 @@ public class Movement : MonoBehaviour {
 	const float MAX_MOVE_SPEED = 20f;
 	const float IDLE_SPEED = 0.3f;
 	movementType movType;
+	JumpState jumpType;
 	public movementDirection movDirection;
 
 	public bool isGrounded = true;
@@ -33,12 +41,13 @@ public class Movement : MonoBehaviour {
 	public KeyCode rightFoot;
 	public KeyCode jump;
 	public Rigidbody forcedAppliedTo;
+	public JumpListener jumplistener;
 
 	// Use this for initialization
 	void Start () 
 	{
 		movType = movementType.idle;
-
+		jumpType = JumpState.none;
 		if (movDirection == movementDirection.left) 
 			rotateSpeed *= -1;
 	}
@@ -58,8 +67,8 @@ public class Movement : MonoBehaviour {
 		}
 		else if (Input.GetKeyDown(jump) && isGrounded)
 		{
-			movType = movementType.jump;
-			StartCoroutine(Jump(jumpPower));
+			jumpType = JumpState.prepared;
+			StartCoroutine(PreparingToJump());
 		}
 
 		if (forcedAppliedTo.velocity.magnitude < IDLE_SPEED)
@@ -76,10 +85,25 @@ public class Movement : MonoBehaviour {
 		yield return new WaitForFixedUpdate();
 	}
 
+	IEnumerator PreparingToJump()
+	{
+		bool jumping = false;
+		while (!jumping) 
+		{
+			// Animation of preparing a jump
+			if (Input.GetKeyUp(jump))
+				jumping = true;
+
+			yield return null;
+		}
+		// Animation of a jump
+		// Check if both are jumping
+		StartCoroutine (jumplistener.checkJumpState (jumpPower));
+	}
+
 	IEnumerator Jump(float speed)
 	{
-		forcedAppliedTo.AddForce(new Vector3(0, speed, 0), ForceMode.VelocityChange);
-		isGrounded = false;
+
 
 		yield return new WaitForFixedUpdate();
 	}
