@@ -11,6 +11,8 @@ public class FaceTextureStore : MonoBehaviour
     public Texture2D BlueVassalFace;
     public Texture2D RedVassalFace;
 
+    public int FinalScore;
+
     void Start()
     {
         DontDestroyOnLoad(this);
