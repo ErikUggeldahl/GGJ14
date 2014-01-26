@@ -431,7 +431,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59699011, y: -1.68838453, z: -3.72845221}
+  m_LocalPosition: {x: -9.74624634, y: -.0279636383, z: -8.16604614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -466,7 +466,7 @@ Animation:
   - {fileID: 7400004, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
   - {fileID: 7400006, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
 --- !u!114 &11400000
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBeforeRespawn: 3
+  swarmAnim: {fileID: 11100000}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

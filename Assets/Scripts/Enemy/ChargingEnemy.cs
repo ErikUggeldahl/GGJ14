@@ -17,12 +17,11 @@ public class ChargingEnemy : MonoBehaviour {
 		get { return target; }
 		set { target = value; }
 	}
-
-
-	chargingState state;
+	
 
 	public float chargingSpeed;
 	float ATTACKDISTANCE = 2;
+	public SpawmEnemy spawning;
 
 	void Start () 
 	{
@@ -35,19 +34,15 @@ public class ChargingEnemy : MonoBehaviour {
 		switch (state) 
 		{
 		case chargingState.idle:
-			this.state = chargingState.idle;
 			StartCoroutine(Idle());
 				break;
 		case chargingState.charging:
-			this.state = chargingState.charging;
 			StartCoroutine(Charging());
 			break;
 		case chargingState.attacking:
-			this.state = chargingState.attacking;
 			StartCoroutine(Attack());
 			break;
 		case chargingState.dead:
-			this.state = chargingState.dead;
 			StartCoroutine(Death());
 			break;
 		}
@@ -78,6 +73,7 @@ public class ChargingEnemy : MonoBehaviour {
 		while (Vector3.Distance(transform.position, target.position) < ATTACKDISTANCE) 
 		{
 			// Decide what to do when the player is hit
+			target.GetComponent<TeamHealth>().TakeDamage(1);
 			yield return null;
 		}
 		StartCoroutine(ChangeState (chargingState.charging));
@@ -85,7 +81,9 @@ public class ChargingEnemy : MonoBehaviour {
 
 	IEnumerator Death()
 	{
-		Destroy (gameObject);
+		GameObject temp = gameObject;
+		spawning.SetPosition(ref temp, false);
+		Start();
 		yield return null;
 	}
 

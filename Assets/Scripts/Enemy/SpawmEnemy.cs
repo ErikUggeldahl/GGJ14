@@ -23,23 +23,38 @@ public class SpawmEnemy : MonoBehaviour {
 		for (int i = 0; i < amount; i++)
 		{
 			GameObject minion =  (GameObject)Instantiate(swarmEnemtObject);
-			SetPosition(ref minion);
+			SetPosition(ref minion, true);
 		}
 	}
 
-	public void SetPosition(ref GameObject minion)
+	public void SetPosition(ref GameObject minion, bool valueSetup)
 	{
 		minion.transform.position = RandomSpawnLocation(ourCollider.bounds);
 		minion.transform.rotation = transform.rotation;
+		if (valueSetup)
+			SetupValue(minion);
+	}
+
+	public void SetupValue(GameObject minion)
+	{
 		minion.rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
-		SwarmEnemyMovement movement = minion.GetComponent<SwarmEnemyMovement>();
-		movement.timeBeforeRespawn = timeBeforeRespawn;
-		movement.SwarmSpawner = this;
-		movement.Target = target;
-		movement.SwarmSpeed = enemySpeed;
-		movement.IsActive = true;
-		StartCoroutine(movement.Seek());
+		if (minion.GetComponent<SwarmEnemyMovement> () != null) 
+		{
+			SwarmEnemyMovement movement = minion.GetComponent<SwarmEnemyMovement> ();
+			movement.timeBeforeRespawn = timeBeforeRespawn;
+			movement.SwarmSpawner = this;
+			movement.Target = target;
+			movement.SwarmSpeed = enemySpeed;
+			movement.IsActive = true;
+			StartCoroutine (movement.Seek ());
+		}
+		else if (minion.GetComponent<ChargingEnemy> () != null)
+		{
+			ChargingEnemy movement = minion.GetComponent<ChargingEnemy> ();
+			movement.target = target;
+			movement.spawning = this;
+		}
 	}
 	
 	void Update()

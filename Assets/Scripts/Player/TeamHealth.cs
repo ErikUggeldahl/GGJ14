@@ -22,8 +22,9 @@ public class TeamHealth : MonoBehaviour {
 		if (!isInvicible) 
 		{
 			currentHP -= damage;
+			Debug.Log(currentHP);
 			isInvicible = true;
-			hud.MoveHPHudItem(damage);
+			hud.MoveHPHudItem(startingHP - currentHP);
 			StartCoroutine(invicibilityCooldown(invicibilityTimer));
 		}
 	}

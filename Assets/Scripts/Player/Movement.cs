@@ -12,13 +12,6 @@ enum movementType
 	cantMove
 }
 
-enum JumpState
-{
-	none = 0,
-	prepared,
-	jumping
-}
-
 public enum movementDirection
 {
 	left,
@@ -33,7 +26,6 @@ public class Movement : MonoBehaviour {
 	const float MAX_MOVE_SPEED = 20f;
 	const float IDLE_SPEED = 0.3f;
 	movementType movType;
-	JumpState jumpType;
 	public movementDirection movDirection;
 
 	public bool isGrounded = true;
@@ -43,11 +35,12 @@ public class Movement : MonoBehaviour {
 	public Rigidbody forcedAppliedTo;
 	public JumpListener jumplistener;
 
+	public Animation VassalAnim;
+
 	// Use this for initialization
 	void Start () 
 	{
 		movType = movementType.idle;
-		jumpType = JumpState.none;
 		if (movDirection == movementDirection.left) 
 			rotateSpeed *= -1;
 	}
@@ -58,16 +51,17 @@ public class Movement : MonoBehaviour {
 		if (Input.GetKeyDown(leftFoot) && movType != movementType.leftFoot)
 		{
 			movType = movementType.leftFoot;
+			VassalAnim.PlayQueued("Walk1");
 			StartCoroutine(Move(moveSpeed));
 		}
 		else if (Input.GetKeyDown(rightFoot) && movType != movementType.rightFoot)
 		{
 			movType = movementType.rightFoot;
+			VassalAnim.PlayQueued("Walk2");
 			StartCoroutine(Move(moveSpeed));
 		}
 		else if (Input.GetKeyDown(jump) && isGrounded)
 		{
-			jumpType = JumpState.prepared;
 			StartCoroutine(PreparingToJump());
 		}
 

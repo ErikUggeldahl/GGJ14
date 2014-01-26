@@ -23,7 +23,6 @@ public class SwarmEnemyMovement : MonoBehaviour {
 	}
 
 	public float timeBeforeRespawn;
-	Bounds ourDimension;
 
 	SpawmEnemy swarmSpawner;
 	public SpawmEnemy SwarmSpawner
@@ -32,26 +31,39 @@ public class SwarmEnemyMovement : MonoBehaviour {
 		get { return swarmSpawner; }
 	}
 
+	public Animation swarmAnim;
+
+	const float SWARM_ATTACK_RANGE = 0.3f;
+
 	// Use this for initialization
 	void Start () 
 	{
-		ourDimension = GetComponent<Collider>().bounds;
 		StartCoroutine(Seek());
 	}
 	
 	// Update is called once per frame
 	public IEnumerator Seek() 
 	{
+		swarmAnim.PlayQueued("Walk");
 		while (isActive) 
 		{
 			Move(swarmSpeed);
+			if (Vector3.Distance(transform.position, target.position) < SWARM_ATTACK_RANGE)
+				Attack(1);
 			yield return new WaitForFixedUpdate();
 		}
 
+		swarmAnim.Stop();
+		swarmAnim.PlayQueued("Splay");
 		rigidbody.AddTorque(50f,0,0, ForceMode.VelocityChange);
 		yield return new WaitForSeconds (timeBeforeRespawn);
 		GameObject temp = gameObject;
-		swarmSpawner.SetPosition (ref temp);
+		swarmSpawner.SetPosition (ref temp, true);
+	}
+
+	void Attack(int damage)
+	{
+		target.GetComponent<TeamHealth>().TakeDamage(damage);
 	}
 
 	void Move(float speed)

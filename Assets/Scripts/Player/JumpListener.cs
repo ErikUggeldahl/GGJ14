@@ -29,5 +29,7 @@ public class JumpListener : MonoBehaviour {
 	void Jump(float jumpPower)
 	{
 		rigidbody.AddForce(new Vector3(0, jumpPower, 0), ForceMode.VelocityChange);
+		for (int i = 0; i < movers.Length; i++)
+			movers[i].isGrounded = false;
 	}
 }

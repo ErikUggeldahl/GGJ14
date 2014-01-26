@@ -3,18 +3,7 @@ using System.Collections;
 
 public class Obstacle : MonoBehaviour {
 
-	public int damage;
-
-	// Use this for initialization
-	void Start () 
-	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public int damage = 1;
 
 	void OnCollisionEnter(Collision other)
 	{

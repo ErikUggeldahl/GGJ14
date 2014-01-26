@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class HUD3D : MonoBehaviour {
 
-	public GameObject[] hPHudItems;
+	public List<GameObject> hPHudItems;
 	public float objectMoveSpeed;
 	public Vector3 deplacement;
 
 	public void MoveHPHudItem(int damage)
 	{
-		for (int i = 0; i < damage; i++) 
-		{
-			StartCoroutine(SmoothMove(hPHudItems[i].transform));
-		}
+		if (hPHudItems.Count == 0)
+			return;
+		StartCoroutine(SmoothMove(hPHudItems[0].transform));
 	}
 
 	IEnumerator SmoothMove(Transform objectToMove)
@@ -36,5 +36,7 @@ public class HUD3D : MonoBehaviour {
 			objectToMove.position = Vector3.Slerp (initPos, destination, Mathf.SmoothStep (0f, 1f, Mathf.SmoothStep (0f, 1f, ratio)));
 			yield return null;
 		}
+		hPHudItems.RemoveAt(0);
+
 	}
 }
