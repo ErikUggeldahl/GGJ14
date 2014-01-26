@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: BaseHandle002
+    100002: BBase002
+    100004: BHead002
+    100006: BLArm005
+    100008: BLArm006
+    100010: BLLeg005
+    100012: BLLeg006
+    100014: BRArm005
+    100016: BRArm006
+    100018: BRLeg005
+    100020: BRLeg006
+    100022: BSpine005
+    100024: BSpine006
+    100026: Enemy
+    100028: //RootNode
+    400000: BaseHandle002
+    400002: BBase002
+    400004: BHead002
+    400006: BLArm005
+    400008: BLArm006
+    400010: BLLeg005
+    400012: BLLeg006
+    400014: BRArm005
+    400016: BRArm006
+    400018: BRLeg005
+    400020: BRLeg006
+    400022: BSpine005
+    400024: BSpine006
+    400026: Enemy
+    400028: //RootNode
+    4300000: Enemy
+    7400000: Bind
+    7400002: Walk
+    7400004: Splay
+    7400006: Charge
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Enemy
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bind
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: .100000001
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle002
+        weight: 1
+      - path: BaseHandle002/BBase002
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
+        weight: 1
+      - path: Enemy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 16
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle002
+        weight: 1
+      - path: BaseHandle002/BBase002
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
+        weight: 1
+      - path: Enemy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Splay
+      takeName: Take 001
+      firstFrame: 17
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle002
+        weight: 1
+      - path: BaseHandle002/BBase002
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
+        weight: 1
+      - path: Enemy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Charge
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 28
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BaseHandle002
+        weight: 1
+      - path: BaseHandle002/BBase002
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BLLeg006/BLLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006
+        weight: 1
+      - path: BaseHandle002/BBase002/BRLeg006/BRLeg005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BHead002
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BLArm005/BLArm006
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005
+        weight: 1
+      - path: BaseHandle002/BBase002/BSpine005/BSpine006/BRArm005/BRArm006
+        weight: 1
+      - path: Enemy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  userData: 
