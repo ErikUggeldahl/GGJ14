@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e86cf7c72a9b2704fa6d6f01dcd6ecb4, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -87,7 +87,7 @@ GameObject:
   - 114: {fileID: 191674949}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ GameObject:
   - 114: {fileID: 266049754}
   m_Layer: 0
   m_Name: Charger
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +248,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chargingSpeed: 6
+--- !u!1 &300624698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 300624703}
+  - 20: {fileID: 300624702}
+  - 124: {fileID: 300624701}
+  - 92: {fileID: 300624700}
+  - 81: {fileID: 300624699}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &300624699
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300624698}
+  m_Enabled: 1
+--- !u!92 &300624700
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300624698}
+  m_Enabled: 1
+--- !u!124 &300624701
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300624698}
+  m_Enabled: 1
+--- !u!20 &300624702
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300624698}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 0
+  m_OcclusionCulling: 1
+--- !u!4 &300624703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300624698}
+  m_LocalRotation: {x: -.160918191, y: -.757561624, z: -.339212269, w: .533985794}
+  m_LocalPosition: {x: .931126237, y: .742060184, z: -1.68719745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &338170172
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +690,7 @@ Animation:
   m_GameObject: {fileID: 812347449}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
+  m_Animation: {fileID: 7400002, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
   - {fileID: 7400002, guid: 424ea4ff3bf10d34eb8c7b0e26f7ef8e, type: 3}
